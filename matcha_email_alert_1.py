@@ -6,10 +6,10 @@ from email.mime.multipart import MIMEMultipart
 
 # === CONFIG ===
 SAZEN_PRODUCT_URL = 'https://www.sazentea.com/en/products/c21-matcha'
-EMAIL_FROM = ''
-EMAIL_TO = ''  # Can be same as sender
+EMAIL_FROM = os.environ['EMAIL_FROM']
+EMAIL_TO = os.environ['EMAIL_TO']  # Can be same as sender
 EMAIL_SUBJECT = '🍵 Matcha In Stock Alert!'
-GMAIL_APP_PASSWORD = ''  # NOT your normal Gmail password
+GMAIL_APP_PASSWORD = os.environ['GMAIL_APP_PASSWORD']  # NOT your normal Gmail password
 
 # === CHECK AVAILABILITY ===
 def is_matcha_available():
