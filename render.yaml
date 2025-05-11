@@ -4,5 +4,5 @@ services:
     schedule: "0 * * * *"  # every hour
     runtime: python
     buildCommand: ""
-    startCommand: "python matcha_checker.py"
+    startCommand: "python matcha_email_alert_1.py
 
