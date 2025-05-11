@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+import os
 
 # === CONFIG ===
 SAZEN_PRODUCT_URL = 'https://www.sazentea.com/en/products/c21-matcha'
