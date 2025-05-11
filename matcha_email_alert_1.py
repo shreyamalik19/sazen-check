@@ -17,6 +17,7 @@ def is_matcha_available():
         response = requests.get(SAZEN_PRODUCT_URL)
         soup = BeautifulSoup(response.text, 'html.parser')
         print(soup.text)
+        print("is matcha available? " , "Marukyu Koyamaen" in soup.text)
         return "Marukyu Koyamaen" in soup.text
     except Exception as e:
         print("Error checking stock:", e)
@@ -28,6 +29,8 @@ def send_email():
     msg['From'] = EMAIL_FROM
     msg['To'] = EMAIL_TO
     msg['Subject'] = EMAIL_SUBJECT
+    print ("email from: ", EMAIL_FROM)
+    print ("email to: " , EMAIL_TO)
 
     body = "Good news! 🍵 Marukyu Koyamaen matcha is in stock on Sazen:\n" + SAZEN_PRODUCT_URL
     msg.attach(MIMEText(body, 'plain'))
