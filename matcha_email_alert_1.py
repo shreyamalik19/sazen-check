@@ -19,7 +19,7 @@ def is_matcha_available():
         soup = BeautifulSoup(response.text, 'html.parser')
         print(soup.text)
         print("is matcha available? " , "Marukyu Koyamaen" in soup.text)
-        return "Marukyu Koyamaen" in soup.text
+        return "Marukyu Koyamaen" in soup.prettify()
     except Exception as e:
         print("Error checking stock:", e)
         return False
