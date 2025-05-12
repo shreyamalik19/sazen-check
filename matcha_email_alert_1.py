@@ -35,7 +35,7 @@ def send_email():
     print ("email from: ", EMAIL_FROM)
     print ("email to: " , EMAIL_TO)
 
-    body = "Good news! 🍵 Marukyu Koyamaen matcha is in stock on Sazen:\n" + SAZEN_PRODUCT_URL
+    body = "Good news! 🍵 Marukyu Koyamaen/Yamamasa Koyamaen/Kanbayashi Shunsho in stock on Sazen:\n" + SAZEN_PRODUCT_URL
     msg.attach(MIMEText(body, 'plain'))
 
     try:
