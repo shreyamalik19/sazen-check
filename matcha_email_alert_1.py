@@ -19,8 +19,9 @@ def is_matcha_available():
         soup = BeautifulSoup(response.text, 'html.parser')
         #print(soup.text)
         content = soup.find(id="content")
-        #print ("content: " , content)
+        print ("content: " , content)
         print("is matcha available? " , "Marukyu Koyamaen" in content)
+        print("is matcha available? " , "Kanbayashi Shunsho" in content)
         return ("Marukyu Koyamaen" in content) or ("Yamamasa Koyamaen" in content) or ("Kanbayashi Shunsho" in content)
     except Exception as e:
         print("Error checking stock:", e)
