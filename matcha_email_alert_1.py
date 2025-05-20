@@ -18,11 +18,11 @@ def is_matcha_available():
         response = requests.get(SAZEN_PRODUCT_URL)
         soup = BeautifulSoup(response.text, 'html.parser')
         #print(soup.text)
-        content = soup.find(id="content")
-        print ("content: " , str(content))
-        print("is matcha available? " , "Marukyu Koyamaen" in str(content))
-        print("is matcha available? " , "Kanbayashi Shunsho" in str(content))
-        return ("Marukyu Koyamaen" in str(content)) or ("Yamamasa Koyamaen" in str(content)) or ("Kanbayashi Shunsho" in str(content))
+        content = str(soup.find(id="content"))
+        #print ("content: " , content)
+        #print("is matcha available? " , "Marukyu Koyamaen" in str(content))
+        #print("is matcha available? " , "Kanbayashi Shunsho" in str(content))
+        return ("Marukyu Koyamaen" in content) or ("Yamamasa Koyamaen" in content) or ("Kanbayashi Shunsho" in content)
     except Exception as e:
         print("Error checking stock:", e)
         return False
